@@ -3,10 +3,11 @@
 let connection;
 
 const handleUserInput = function(key) {
+  
   if (key === "\u0003") { // if user presses Ctrl+C
     process.exit(); // exit the process
-  } else if (key === "w") {
-    connection.write("Move: up");
+  } else if ( key === "w") {
+    connection.write("Move: up")
   } else if (key === "a") {
     connection.write("Move: left");
   } else if (key === "s") {
@@ -18,7 +19,7 @@ const handleUserInput = function(key) {
 // setup interface to handle user input from stdin
 
 const setupInput = function(conn) {
-
+  connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
@@ -32,4 +33,4 @@ const setupInput = function(conn) {
 };
 
 
-module.exports = setupInput;
+module.exports = setupInput

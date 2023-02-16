@@ -20,10 +20,7 @@ const connect = function() {
     // it will move our snake up one block.
     //conn.write("Move: up")
     
-    
   });
-
-
 
 
   return conn;
