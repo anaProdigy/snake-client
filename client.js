@@ -17,7 +17,14 @@ const connect = function() {
     console.log("Successfully connected to game server")
 
     conn.write("Name: ANA");
-  })
+    // it will move our snake up one block.
+    //conn.write("Move: up")
+    
+    
+  });
+
+
+
 
   return conn;
 }
