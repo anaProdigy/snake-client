@@ -4,8 +4,8 @@ const setupInput = require("./input.js")
 
  
 console.log("Connecting ...");
-const conn = connect();
+const connectObj = connect();
 
 
 // call the setupInput function to enable the input interface
-setupInput(conn);
+setupInput(connectObj);
