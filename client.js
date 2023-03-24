@@ -1,9 +1,11 @@
 const net = require("net");
+const { IP, PORT } = require("./constants");
+
 // establishes a connection with the game server
 const connect = function() {
   const conn = net.createConnection({
-    host: "localhost",
-    port: 50541,
+    host: IP,
+    port: PORT,
   });
 
   conn.on("data", (data) => {
@@ -37,59 +39,3 @@ module.exports = connect;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const net = require("net");
-// const { IP, PORT } = require("./constants");
-
-// // establishes a connection with the game server
-// const connect = function() {
-//   const conn = net.createConnection({
-//     host: IP,     // IP address here,
-//     port: PORT
-//   });
-//   // interpret incoming data as text
-//   conn.setEncoding("utf8");
-
-//   conn.on("data", (data) => {
-//     console.log("Server says: ", data);
-//   });
-
-//   conn.on("connect", () => {
-//     console.log("Successfully connected to game server")
-
-//     conn.write("Name: ANA");
-//     // it will move our snake up one block.
-//     //conn.write("Move: up")
-    
-//   });
-
-
-//   return conn;
-// }
-
-
-//   module.exports = connect;
